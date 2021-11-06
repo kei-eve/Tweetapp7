@@ -1,0 +1,12 @@
+<h2>修正画面</h2>
+<div>
+    <% @post.errors.full_messages.each do |message| %>
+    <%= message %>
+    <% end %>
+</div>
+<div>
+    <%= form_tag("/posts/#{@post.id}/update") do %>
+        <textarea name="content"><%= @post.content %></textarea>
+        <input type="submit" value="更新">
+    <% end %>
+</div>

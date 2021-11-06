@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tweetapp7</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h2><%= link_to("TweetApp7", "/") %></h2>
+      <ul>
+        <li><%= link_to("TweetAppとは", "/about") %></li>
+        <li><%= link_to("投稿一覧", "/posts/index") %></li>
+        <li><%= link_to("新規投稿", "/posts/new") %></li>
+      </ul>
+    </header>
+    <div>
+      <%= flash[:notice] %>
+    </div>
+    <%= yield %>
+  </body>
+</html>
