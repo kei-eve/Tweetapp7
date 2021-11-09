@@ -1,5 +1,10 @@
 <h1>アカウント編集</h1>
 <div>
+    <% @user.errors.full_messages.each do |message| %>
+    <%= message %>
+    <% end %>
+</div>
+<div>
     <%= form_tag("/users/#{@user.id}/update") do %>
     <div>
         <p>ユーザー名</p>

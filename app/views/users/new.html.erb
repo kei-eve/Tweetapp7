@@ -1,5 +1,10 @@
 <h1>新規ユーザー登録</h1>
 <div>
+    <% @user.errors.full_messages.each do |message| %>
+    <%= message %>
+    <% end %>
+</div>
+<div>
     <%= form_tag("/users/create") do %>
     <div>
         <p>ユーザー名</p>
